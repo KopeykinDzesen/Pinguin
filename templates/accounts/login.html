@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Pinguin login{% endblock %}
+
+{% block link %}
+{#    <link rel="stylesheet" href="{% static 'accounts/accounts.css' %}" type="text/css">#}
+{% endblock %}
+
+{% block content %}
+{#    <div class="form">#}
+{#        {% include 'accounts/login_widget.html' %}#}
+{#    </div>#}
+{#    <span class="form-error">{{ form.errors }}</span>#}
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'accounts/accounts.js' %}"></script>
+{% endblock %}

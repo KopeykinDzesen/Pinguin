@@ -1,0 +1,127 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pinguin</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'img/favicon/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'img/favicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patua+One:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" type="text/css">
+
+</head>
+<body>
+
+    <div class="main-wrapper">
+
+        <div class="container-fluid main-container">
+
+            <div class="row align-items-center main-row">
+
+                <div class="col-md content-col">
+
+                    <div class="logo">
+                        <span>Pinguin</span>
+                    </div>
+
+                </div>
+
+                <div class="col-md reg-auth-col">
+
+                    <div class="reg-auth-block">
+
+                        <div class="form-nav">
+                            <div class="form-nav-col">
+                                <span class="form-nav-text form-nav-text-active" id="nav-signin">SIGN IN</span>
+                            </div>
+                            <div class="form-nav-col">
+                                <span class="form-nav-text" id="nav-signup">SIGN UP</span>
+                            </div>
+                        </div>
+
+                        <form class="form-main form-signin" action="{% url 'accounts:registration' %}" method="post">{% csrf_token %}
+
+                            <div class="field-wrapper">
+                                <label class="label-text">Username</label>
+                                <input class="input-text" type="text" name="{{ form.username.html_name }}" required autocomplete="off">
+                            </div>
+
+                            <div class="field-wrapper">
+                                <label class="label-text">Password</label>
+                                <input class="input-text" type="password" name="{{ form.password.html_name }}" required autocomplete="off">
+                            </div>
+
+                            <div class="field-wrapper">
+                                <input class="input-checkbox" id="input-checkbox1" type="checkbox">
+                                <label class="label-checkbox" for="input-checkbox1">Keep my Signed In</label>
+                            </div>
+
+                            <div class="field-wrapper">
+                                <button class="btn-submit-form" type="submit">SIGN IN</button>
+                            </div>
+
+                            <div class="forgot-password">
+                                <a href="#">Forgot password?</a>
+                            </div>
+
+                        </form>
+
+                        <form class="form-main form-signup">
+                            <div class="field-wrapper">
+                                <label class="label-text">Username</label>
+                                <input class="input-text" type="text" name="{{ form.username.html_name }}" required autocomplete="off">
+                            </div>
+
+                            <div class="field-wrapper">
+                                <label class="label-text">Password</label>
+                                <input class="input-text" type="password" name="{{ form.password.html_name }}" required autocomplete="off">
+                            </div>
+
+                            <div class="field-wrapper">
+                                <label class="label-text">Confirm password</label>
+                                <input class="input-text" type="password" name="{{ form.confirm_password.html_name }}" required autocomplete="off">
+                            </div>
+
+                            <div class="field-wrapper">
+                                <input class="input-checkbox" id="input-checkbox2" type="checkbox">
+                                <label class="label-checkbox" for="input-checkbox2">Keep my Signed In</label>
+                            </div>
+
+                            <div class="field-wrapper">
+                                <button class="btn-submit-form" type="submit">SIGN UP</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div><!--row-->
+
+        </div><!--container-fluid-->
+
+    </div><!--main-wrapper-->
+
+    <script src="{% static 'js/jquery-3.2.1.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+
+</body>
+</html>

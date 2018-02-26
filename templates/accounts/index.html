@@ -1,0 +1,170 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pinguin</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'img/favicon/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'img/favicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Patua+One|Roboto+Slab:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'accounts/accounts.css' %}" type="text/css">
+
+</head>
+<body>
+
+<div class="header">
+    <h1>Pinguin</h1>
+</div>
+
+<div class="main-wrapper">
+
+    <div class="container-fluid">
+
+        <div class="row align-items-start">
+
+            <div class="col-lg-6 carousel-col">
+
+                <div id="advertising_carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#advertising_carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#advertising_carousel" data-slide-to="1"></li>
+                        <li data-target="#advertising_carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <p>Примечание: если вы пытаетесь анимировать элемент с высотой или шириной 0px,
+                                где содержимое элемента видно из-за переполнения, jQuery может обрезать это
+                                переполнение во время анимации.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <p>Примечание: если вы пытаетесь анимировать элемент с высотой или шириной 0px,
+                                где содер воспроизведение анимации. С помощью clearfix
+                                можно автоматически фиксировать размеры основного элемента без необходимости
+                                устанавливать его вручную.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <p>Примечание: если вы пытаетесь анимировать элемент с высотой или шириной 0px,
+                                где содержимое элемента видно из-за перез необходимости
+                                устанавливать его вручную.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 reg-auth-col">
+
+                <div id="reg_auth_container">
+
+                    <div id="auth_container">
+
+                        <form method="post" class="form-container">
+
+                            <h1>Login to your account</h1>
+
+                            <div class="field-wrapper">
+                                <label>
+                                Username
+                                </label>
+                                <input type="text" id="label_focus">
+                            </div>
+
+                            <div class="field-wrapper">
+                                <label>
+                                Password
+                                </label>
+                                <input type="password">
+                            </div>
+
+                            <p id="forgot_password"><a href="#">Forgot password?</a></p>
+
+                            <button class="btn-submit-form" type="submit">Sign in</button>
+
+                        </form>
+
+                        <div class="swap-forms-btn">
+                            <span>Have an account? Sign in!</span>
+                        </div>
+
+                    </div><!--auth_container-->
+
+                    <div id="reg_container">
+
+                        <form method="post" class="form-container">
+
+                            <h1>Welcome my friend!</h1>
+
+                            <div class="field-wrapper">
+                                <label>
+                                Username
+                                </label>
+                                <input type="text">
+                            </div>
+
+                            <div class="field-wrapper">
+                                <label>
+                                Email
+                                </label>
+                                <input type="text">
+                            </div>
+
+                            <div class="field-wrapper">
+                                <label>
+                                Password
+                                </label>
+                                <input type="text">
+                            </div>
+
+                            <div class="field-wrapper">
+                                <label>
+                                Confirm password
+                                </label>
+                                <input type="password">
+                            </div>
+
+                            <button class="btn-submit-form" type="submit">Register</button>
+
+                        </form>
+
+                        <div class="swap-forms-btn">
+                            <span>No account? Register now!</span>
+                        </div>
+
+                    </div><!--reg_container-->
+
+                </div><!--reg_auth_container-->
+
+            </div><!--reg-auth-col-->
+
+        </div><!--row-->
+
+    </div><!--container-fluid-->
+
+</div><!--main-wrapper-->
+
+<div class="footer">
+    Pinguin social network. All rights reserved... bla, bla, bla
+</div>
+
+
+    <script src="{% static 'js/jquery-3.2.1.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'accounts/forms_scripts.js' %}"></script>
+
+</body>
+</html>
